@@ -13,6 +13,7 @@ from linebot.models import *
 from message import *
 from new import *
 from Function import *
+from msglist import *
 #======這裡是呼叫的檔案內容=====
 
 app = Flask(__name__)
@@ -60,7 +61,8 @@ def handle_message(event):
         message = function_list()
         line_bot_api.reply_message(event.reply_token, message)
     else:
-        message = TextSendMessage(text=msg)
+        #message = TextSendMessage(text=msg)
+        #message = replay_msglist(msg)
         line_bot_api.reply_message(event.reply_token, message)
 
 
