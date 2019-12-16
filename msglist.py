@@ -5,6 +5,6 @@ from linebot.models import *
 def replay_msglist(msg):
     if '你好' in msg:
         return "你好"
-    
+    elif '' in mag 
 
 
