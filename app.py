@@ -62,7 +62,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
     else:
         #message = TextSendMessage(text=msg)
-        message = "你好"
+        message = TextSendMessage(text=replay_msglist(msg))
         line_bot_api.reply_message(event.reply_token, message)
 
 
