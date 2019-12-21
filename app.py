@@ -45,21 +45,12 @@ def handle_message(event):
     if '店家' or '店家資訊' in msg:
         message = msglist_Store()
         line_bot_api.reply_message(event.reply_token, message)
-    #elif '最新活動訊息' in msg:
-    #    message = buttons_message()
-    #    line_bot_api.reply_message(event.reply_token, message)
-    #elif '註冊會員' in msg:
-    #    message = Confirm_Template()
-    #    line_bot_api.reply_message(event.reply_token, message)
     elif '選單' in msg:
         message = msglist_Template()
         line_bot_api.reply_message(event.reply_token, message)
     elif '產品' in msg:
         message = msglist_Product()
         line_bot_api.reply_message(event.reply_token, message)
-    #elif '功能列表' in msg:
-    #    message = function_list()
-    #    line_bot_api.reply_message(event.reply_token, message)
     else:
         #message = TextSendMessage(text=msg)
         message = replay_msglist(msg)
