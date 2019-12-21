@@ -43,7 +43,7 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     if '店家' or '店家資訊' in msg:
-        message = imagemap_message()
+        message = msglist_Store()
         line_bot_api.reply_message(event.reply_token, message)
     #elif '最新活動訊息' in msg:
     #    message = buttons_message()
