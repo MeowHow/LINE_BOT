@@ -66,6 +66,7 @@ def msglist_Template():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
+                    thumbnail_image_url="https://pic2.zhimg.com/v2-de4b8114e8408d5265503c8b41f59f85_b.jpg",
                     title='這是第一塊模板',
                     text='一個模板可以有三個按鈕',
                     actions=[
@@ -77,6 +78,7 @@ def msglist_Template():
                     ]
                 ),
                 CarouselColumn(
+                    thumbnail_image_url="https://pic2.zhimg.com/v2-de4b8114e8408d5265503c8b41f59f85_b.jpg",
                     title='這是第二塊模板',
                     text='副標題可以自己改',
                     actions=[
@@ -88,6 +90,7 @@ def msglist_Template():
                     ]
                 ),
                 CarouselColumn(
+                    thumbnail_image_url="https://pic2.zhimg.com/v2-de4b8114e8408d5265503c8b41f59f85_b.jpg",
                     title='這是第三個模塊',
                     text='最多可以放十個',
                     actions=[
