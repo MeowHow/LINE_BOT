@@ -21,7 +21,6 @@ def msglist_Template():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url="111",
                     title='這是第一塊模板',
                     text='一個模板可以有三個按鈕',
                     actions=[
