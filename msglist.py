@@ -28,24 +28,6 @@ def msglist_Template():
                             text='功效'
                         )
                     ]
-                ),
-                CarouselColumn(
-                    title='快速提問─店家資訊',
-                    actions=[
-                        MessageTemplateAction(
-                            label='店家資訊',
-                            text='店家資訊'
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    title='快速提問─產品示意圖',
-                    actions=[
-                        MessageTemplateAction(
-                            label='產品示意圖',
-                            text='產品'
-                        )
-                    ]
                 )
             ]
         )
