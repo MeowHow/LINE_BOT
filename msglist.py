@@ -24,17 +24,10 @@ def msglist_Template():
                     title='這是第一塊模板',
                     text='一個模板可以有三個按鈕',
                     actions=[
-                        PostbackTemplateAction(
-                            label='你好',
-                            data='將這個訊息偷偷回傳給機器人'
-                        ),
+   
                         MessageTemplateAction(
                             label='用戶發送訊息',
                             text='產品'
-                        ),
-                        URITemplateAction(
-                            label='你好',
-                            uri='https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Number_1_in_green_rounded_square.svg/200px-Number_1_in_green_rounded_square.svg.png'
                         )
                     ]
                 )
