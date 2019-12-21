@@ -14,52 +14,7 @@ def replay_msglist(T):
         msg = TextSendMessage(text="幹三小？")
         return msg
         
-#選單_快速提問
-def msglist_Template():
-    message = TemplateSendMessage(
-        alt_text='一則旋轉木馬按鈕訊息',
-        template=CarouselTemplate(
-            columns=[
-                CarouselColumn(
-                    thumbnail_image_url="https://pic2.zhimg.com/v2-de4b8114e8408d5265503c8b41f59f85_b.jpg",
-                    title='這是第一塊模板',
-                    text='一個模板可以有三個按鈕',
-                    actions=[
-                        PostbackTemplateAction(
-                        MessageTemplateAction(
-                            label='用戶發送訊息',
-                            text='我知道這是1'
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    thumbnail_image_url="https://pic2.zhimg.com/v2-de4b8114e8408d5265503c8b41f59f85_b.jpg",
-                    title='這是第二塊模板',
-                    text='副標題可以自己改',
-                    actions=[
-                        PostbackTemplateAction(
-                        MessageTemplateAction(
-                            label='用戶發送訊息',
-                            text='我知道這是2'
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    thumbnail_image_url="https://pic2.zhimg.com/v2-de4b8114e8408d5265503c8b41f59f85_b.jpg",
-                    title='這是第三個模塊',
-                    text='最多可以放十個',
-                    actions=[
-                        PostbackTemplateAction(
-                        MessageTemplateAction(
-                            label='用戶發送訊息',
-                            text='我知道這是3'
-                        )
-                    ]
-                )
-            ]
-        )
-    )
-    return message
+
 
 #產品示意
 def msglist_Product():
