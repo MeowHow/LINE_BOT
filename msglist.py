@@ -26,7 +26,27 @@ def msglist_Template():
                     actions=[
                         MessageTemplateAction(
                             label='馬告功效',
-                            text='功效'
+                            text='馬告功效'
+                        )
+                    ]
+                ),
+                CarouselColumn(
+                    title='快速提問─店家資訊',
+                    text='請按按鈕',
+                    actions=[
+                        MessageTemplateAction(
+                            label='店家資訊',
+                            text='店家資訊'
+                        )
+                    ]
+                ),
+                CarouselColumn(
+                    title='快速提問─產品示意圖',
+                    text='請按按鈕',
+                    actions=[
+                        MessageTemplateAction(
+                            label='產品示意圖',
+                            text='產品'
                         )
                     ]
                 )
