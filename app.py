@@ -38,50 +38,6 @@ def callback():
         abort(400)
     return 'OK'
 
-#選單_快速提問
-def msglist_Template():
-    message = TemplateSendMessage(
-        alt_text='選單',
-        template=CarouselTemplate(
-            columns=[
-                CarouselColumn(
-                    title='這是第一塊模板',
-                    text='一個模板可以有三個按鈕',
-                    actions=[
-                        PostbackTemplateAction(
-                        MessageTemplateAction(
-                            label='用戶發送訊息',
-                            text='我知道這是1'
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    title='這是第二塊模板',
-                    text='副標題可以自己改',
-                    actions=[
-                        PostbackTemplateAction(
-                        MessageTemplateAction(
-                            label='用戶發送訊息',
-                            text='我知道這是2'
-                        )
-                    ]
-                ),
-                CarouselColumn(
-                    title='這是第三個模塊',
-                    text='最多可以放十個',
-                    actions=[
-                        PostbackTemplateAction(
-                        MessageTemplateAction(
-                            label='用戶發送訊息',
-                            text='我知道這是3'
-                        )
-                    ]
-                )
-            ]
-        )
-    )
-    return message
-
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
