@@ -22,6 +22,7 @@ def msglist_Template():
             columns=[
                 CarouselColumn(
                     title='快速提問─馬告功效',
+                    text='請按按鈕',
                     actions=[
                         MessageTemplateAction(
                             label='馬告功效',
