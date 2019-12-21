@@ -21,24 +21,16 @@ def msglist_Template():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Number_1_in_green_rounded_square.svg/200px-Number_1_in_green_rounded_square.svg.png',
+                    thumbnail_image_url="https://pic2.zhimg.com/v2-de4b8114e8408d5265503c8b41f59f85_b.jpg",
                     title='這是第一塊模板',
                     text='一個模板可以有三個按鈕',
                     actions=[
                         PostbackTemplateAction(
-                            label='二',
-                            data=''
-                        ),
                         MessageTemplateAction(
                             label='用戶發送訊息',
                             text='我知道這是1'
-                        ),
-                        URITemplateAction(
-                            label='二',
-                            uri=''
                         )
-                    ]
-                )
+                        )
                     ]
                 )
             ]
