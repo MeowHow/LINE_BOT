@@ -21,12 +21,28 @@ def msglist_Template():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    title='這是第一塊模板',
-                    text='一個模板可以有三個按鈕',
+                    title='快速提問─馬告功效',
                     actions=[
-   
                         MessageTemplateAction(
-                            label='用戶發送訊息',
+                            label='馬告功效',
+                            text='功效'
+                        )
+                    ]
+                ),
+                CarouselColumn(
+                    title='快速提問─店家資訊',
+                    actions=[
+                        MessageTemplateAction(
+                            label='店家資訊',
+                            text='店家資訊'
+                        )
+                    ]
+                ),
+                CarouselColumn(
+                    title='快速提問─產品示意圖',
+                    actions=[
+                        MessageTemplateAction(
+                            label='產品示意圖',
                             text='產品'
                         )
                     ]
