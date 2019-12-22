@@ -21,6 +21,7 @@ def msglist_Store():
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
+                    thumbnail_image_url='https://i.imgur.com/AmUSVUp.png',
                     title='烏來泰雅農產合作社',
                     text='請按連結',
                     actions=[
