@@ -48,7 +48,7 @@ def handle_message(event):
     elif '選單' in msg:
         message = msglist_Template()
         line_bot_api.reply_message(event.reply_token, message)
-    elif '產品' in msg:
+    elif '產品示意圖' in msg:
         message = msglist_Product()
         line_bot_api.reply_message(event.reply_token, message)
     else:
