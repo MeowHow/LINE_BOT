@@ -5,7 +5,7 @@ from linebot.models import *
 #關鍵字清單
 def replay_msglist(T):
     if '你好' in T :
-        msg = TextSendMessage(text="你好～這裡是瑪糕～\n可以問我問題唷，如果不知道要問甚麼可以輸入選單兩個字呼叫快問選單～")
+        msg = TextSendMessage(text="你好～這裡是瑪糕～可以問我問題唷，如果不知道要問甚麼可以輸入選單兩個字呼叫快問選單～")
         return msg
     elif '馬告' in T and '功效' in T:
         msg = TextSendMessage(text="馬告具有安眠、鎮痛與抗憂的功效喲～")
