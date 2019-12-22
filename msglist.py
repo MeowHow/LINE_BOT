@@ -13,7 +13,7 @@ def replay_msglist(T):
     elif '馬告' in T and '產品' in T:
         msg = TextSendMessage(text="新鮮或乾燥的馬告都可以作為調味料使用！\n現在也有很多產品像咖啡、餅乾、鳳梨酥也有馬告口味唷～\n在過去，人們會將果實泡水飲用來緩解頭痛呢！")
         return msg
-    elif '馬告' in T and '知識' in T:
+    elif ('馬告' in T and '知識' in T) or '關於馬告' in T:
         msg = TextSendMessage(text="馬告一名來自於泰雅族語Makauy，意指山胡椒且有充滿生機、生生不息的意思～\n馬告從上到下幾乎沒有無用之處，整株植物都可以被有效的利用！")
         return msg
     elif T == "幹":
@@ -51,6 +51,16 @@ def msglist_Template():
         alt_text='快問選單',
         template=CarouselTemplate(
             columns=[
+                CarouselColumn(
+                    title='快速提問─關於馬告',
+                    text='請按按鈕',
+                    actions=[
+                        MessageTemplateAction(
+                            label='關於馬告',
+                            text='關於馬告'
+                        )
+                    ]
+                ),
                 CarouselColumn(
                     title='快速提問─馬告功效',
                     text='請按按鈕',
