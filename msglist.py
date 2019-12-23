@@ -2,9 +2,6 @@ from linebot import (LineBotApi, WebhookHandler)
 from linebot.exceptions import (InvalidSignatureError)
 from linebot.models import *
 
-   A=""
-    B=""
-    C=""
 #關鍵字清單
 def replay_msglist(T):
     if '你好' in T :
@@ -24,9 +21,6 @@ def replay_msglist(T):
         return msg
     elif T == "影片":
         msg = TextSendMessage(text="")
-        return msg
-    elif T == "更多資訊":
-        msg = TextSendMessage(text=C)
         return msg
     elif T == "幹":
         msg = TextSendMessage(text="幹三小？")
@@ -139,10 +133,12 @@ def msglist_Product():
         )
     )
     return message
- 
+    
 def msglist_Recipe():
-    
-    
+    A=""
+    B=""
+    C=""
+    X=0
     import random
 
     if random.randint(0,4) == 1:
@@ -169,7 +165,7 @@ def msglist_Recipe():
                     actions=[
                         MessageTemplateAction(
                             label='更多資訊',
-                            text='更多資訊'
+                            text=B
                         )
                     ]
                 )
