@@ -2,6 +2,9 @@ from linebot import (LineBotApi, WebhookHandler)
 from linebot.exceptions import (InvalidSignatureError)
 from linebot.models import *
 
+   A=""
+    B=""
+    C=""
 #關鍵字清單
 def replay_msglist(T):
     if '你好' in T :
@@ -136,9 +139,7 @@ def msglist_Product():
         )
     )
     return message
-    A=""
-    B=""
-    C=""
+ 
 def msglist_Recipe():
     
     
