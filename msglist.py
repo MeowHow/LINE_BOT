@@ -19,6 +19,9 @@ def replay_msglist(T):
     elif T == "食譜":
         msg = TextSendMessage(text="在我的個人主頁有食譜唷～")
         return msg
+    elif T == "影片":
+        msg = TextSendMessage(text="")
+        return msg
     elif T == "幹":
         msg = TextSendMessage(text="幹三小？")
         return msg
@@ -131,3 +134,42 @@ def msglist_Product():
     )
     return message
     
+def msglist_Recipe():
+    A=""
+    B=""
+    C=""
+    X=0
+    import random
+
+    if random.randint(0,4) == 1:
+        A="光明農場（馬告磚窯雞）"
+        B="地址： 336桃園市復興區復興鄉神木路196號 \n 電話：0913566218"
+        C="https://i.imgur.com/rmJNDwA.jpg"
+    elif random.randint(0,4) == 2:
+        A="馬告燒鴨"
+        B="地址： 313新竹縣尖石鄉嘉樂村1鄰1之15號 \n 電話：035842057"
+        C="https://i.imgur.com/VwAxi4c.jpg"
+    elif random.randint(0,4) == 3:
+        A="慶修院馬告香腸"
+        B="地址： 973花蓮縣吉安鄉中興路 \n 電話：0918204666"
+        C="https://i.imgur.com/nts54Xg.jpg"
+
+    message = TemplateSendMessage(
+        alt_text='餐廳',
+        template=CarouselTemplate(
+            columns=[
+                CarouselColumn(
+                    thumbnail_image_url=C,
+                    title='餐廳─' + A,
+                    text="歡迎光臨",
+                    actions=[
+                        MessageTemplateAction(
+                            label='更多資訊',
+                            text=B
+                        )
+                    ]
+                )
+            ]
+        )
+    )
+    return message
