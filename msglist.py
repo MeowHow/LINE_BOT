@@ -1,6 +1,7 @@
 from linebot import (LineBotApi, WebhookHandler)
 from linebot.exceptions import (InvalidSignatureError)
 from linebot.models import *
+import random
 
 #關鍵字清單
 def replay_msglist(T):
@@ -15,6 +16,9 @@ def replay_msglist(T):
         return msg
     elif ('馬告' in T and '知識' in T) or '關於馬告' in T:
         msg = TextSendMessage(text="馬告一名來自於泰雅族語Makauy，意指山胡椒且有充滿生機、生生不息的意思～\n馬告從上到下幾乎沒有無用之處，整株植物都可以被有效的利用！")
+        return msg
+    elif T == "食譜":
+        msg = TextSendMessage(text="在我的個人主頁有食譜唷～")
         return msg
     elif T == "幹":
         msg = TextSendMessage(text="幹三小？")
@@ -128,7 +132,93 @@ def msglist_Product():
     )
     return message
 
+    def msglist_Recipe():
+    message = TemplateSendMessage(
+        alt_text='快問選單',
+        template=CarouselTemplate(
+            columns=[
+                CarouselColumn(
+                    title='快速提問─關於馬告',
+                    text='請按按鈕',
+                    actions=[
+                        MessageTemplateAction(
+                            label='關於馬告',
+                            text='關於馬告'
+                        )
+                    ]
+                ),
+                CarouselColumn(
+                    title='快速提問─馬告功效',
+                    text='請按按鈕',
+                    actions=[
+                        MessageTemplateAction(
+                            label='馬告功效',
+                            text='馬告功效'
+                        )
+                    ]
+                ),
+                CarouselColumn(
+                    title='快速提問─店家資訊',
+                    text='請按按鈕',
+                    actions=[
+                        MessageTemplateAction(
+                            label='店家資訊',
+                            text='店家資訊'
+                        )
+                    ]
+                ),
+                CarouselColumn(
+                    title='快速提問─產品示意圖',
+                    text='請按按鈕',
+                    actions=[
+                        MessageTemplateAction(
+                            label='產品示意圖',
+                            text='產品示意圖'
+                        )
+                    ]
+                )
+            ]
+        )
+    )
+    return message
 
-    
+#產品示意
+def msglist_Product():
+    A=""
+    B=""
+    C=""
+    X=0
 
+    X = random.randint(0,4)
 
+    if X == 1:
+        A="光明農場（馬告磚窯雞）"
+        B="地址： 336桃園市復興區復興鄉神木路196號\n電話：0913-566-218"
+        C="https://i.imgur.com/rmJNDwA.jpg"
+    elif X == 2:
+        A="馬告燒鴨"
+        B="地址： 313新竹縣尖石鄉嘉樂村1鄰1之15號\n電話：03-584-2057"
+        C="https://i.imgur.com/VwAxi4c.jpg"
+    elif X == 3:
+        A="慶修院馬告香腸"
+        B="地址： 973花蓮縣吉安鄉中興路\n電話：0918-204-666"
+        C="https://i.imgur.com/nts54Xg.jpg"
+
+    message = TemplateSendMessage(
+        alt_text='餐廳',
+        template=CarouselTemplate(
+            columns=[
+                CarouselColumn(
+                    thumbnail_image_url=C,
+                    title='餐廳─' + A,
+                    actions=[
+                        MessageTemplateAction(
+                            label='更多資訊',
+                            text=B
+                        )
+                    ]
+                )
+            ]
+        )
+    )
+    return message

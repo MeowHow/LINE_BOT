@@ -51,6 +51,9 @@ def handle_message(event):
     elif '產品示意圖' in msg:
         message = msglist_Product()
         line_bot_api.reply_message(event.reply_token, message)
+    elif '餐廳' in msg:
+        message = msglist_Recipe()
+        line_bot_api.reply_message(event.reply_token, message)
     else:
         #message = TextSendMessage(text=msg)
         message = replay_msglist(msg)
