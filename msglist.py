@@ -131,7 +131,7 @@ def msglist_Product():
     )
     return message
 
-    def msglist_Recipe():
+    def msglist_Template():
     message = TemplateSendMessage(
         alt_text='快問選單',
         template=CarouselTemplate(
