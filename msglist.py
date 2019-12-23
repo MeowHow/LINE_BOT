@@ -22,6 +22,9 @@ def replay_msglist(T):
     elif T == "影片":
         msg = TextSendMessage(text="")
         return msg
+    elif T == "更多資訊":
+        msg = TextSendMessage(text=C)
+        return msg
     elif T == "幹":
         msg = TextSendMessage(text="幹三小？")
         return msg
@@ -133,12 +136,12 @@ def msglist_Product():
         )
     )
     return message
-    
-def msglist_Recipe():
     A=""
     B=""
     C=""
-    X=0
+def msglist_Recipe():
+    
+    
     import random
 
     if random.randint(0,4) == 1:
@@ -165,7 +168,7 @@ def msglist_Recipe():
                     actions=[
                         MessageTemplateAction(
                             label='更多資訊',
-                            line_bot_api.reply_message(event.reply_token, C)
+                            text='更多資訊'
                         )
                     ]
                 )
