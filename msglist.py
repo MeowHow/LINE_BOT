@@ -26,7 +26,7 @@ def replay_msglist(T):
         msg = TextSendMessage(text="幹三小？")
         return msg
     else:
-        msg = TextSendMessage(text="抱歉～瑪糕還沒完善，不知道你在說甚麼。")
+        #msg = TextSendMessage(text="抱歉～瑪糕還沒完善，不知道你在說甚麼。")
         return msg
 
 #店家
