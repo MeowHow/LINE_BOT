@@ -153,11 +153,11 @@ def msglist_Product():
         C="https://i.imgur.com/nts54Xg.jpg"
 
     message = TemplateSendMessage(
+        thumbnail_image_url=C,
         alt_text='餐廳',
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url=C,
                     title='餐廳─' + A,
                     actions=[
                         MessageTemplateAction(
