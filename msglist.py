@@ -4,14 +4,17 @@ from linebot.models import *
 
 #關鍵字清單
 def replay_msglist(T):
-    if '你好' in T :
+    if '你好' in T or '哈囉' in T or '早安' in T :
         msg = TextSendMessage(text="你好～這裡是瑪糕～\n可以問我問題唷，如果不知道要問甚麼可以輸入選單兩個字呼叫快問選單～")
         return msg
     elif '馬告' in T and '功效' in T:
         msg = TextSendMessage(text="馬告具有安眠、鎮痛與抗憂的功效喲～")
         return msg
+    elif ('馬告' in T and '什麼' in T) or ('馬告' in T and '甚麼' in T):
+        msg = TextSendMessage(text="馬告是一種生長在台灣的山胡椒，最常見的使用方法就是作為調味料加入食物或飲品之中～")
+        return msg
     elif '馬告' in T and '產品' in T:
-        msg = TextSendMessage(text="新鮮或乾燥的馬告都可以作為調味料使用！\n現在也有很多產品像咖啡、餅乾、鳳梨酥也有馬告口味唷～\n在過去，人們會將果實泡水飲用來緩解頭痛呢！")
+        msg = TextSendMessage(text="新鮮或乾燥的馬告都可以作為調味料使用！\n現在也有很多產品像咖啡、餅乾、鳳梨酥也有馬告口味唷～\n在過去，人們會將果實泡水飲用來緩解頭痛呢！\n可以輸入產品示意圖五個字來看實體照片喔！")
         return msg
     elif ('馬告' in T and '知識' in T) or '關於馬告' in T:
         msg = TextSendMessage(text="馬告一名來自於泰雅族語Makauy，意指山胡椒且有充滿生機、生生不息的意思～\n馬告從上到下幾乎沒有無用之處，整株植物都可以被有效的利用！")
