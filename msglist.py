@@ -5,10 +5,13 @@ from linebot.models import *
 #關鍵字清單
 def replay_msglist(T):
     if '你好' in T or '哈囉' in T or '早安' in T :
-        msg = TextSendMessage(text="你好～這裡是瑪糕～\n可以問我問題唷，如果不知道要問甚麼可以輸入選單兩個字呼叫快問選單～\n如果方便的話可以輸入 問卷 讓我們更加了解您的需求")
+        msg = TextSendMessage(text="你好～這裡是瑪糕～\n可以問我問題唷，如果不知道要問甚麼可以輸入選單兩個字呼叫快問選單～\n如果方便的話可以輸入 問卷 讓我們更加了解您的需求！\n另外還有優惠卷可以抽好康喔！")
         return msg
     elif '馬告' in T and '功效' in T:
         msg = TextSendMessage(text="馬告具有安眠、鎮痛與抗憂的功效喲～")
+        return msg
+    elif '優惠卷' in T and T != '優惠卷':
+        msg = TextSendMessage(text="請單獨輸入 優惠卷 三個字來領取喔！")
         return msg
     elif ('馬告' in T and '什麼' in T) or ('馬告' in T and '甚麼' in T):
         msg = TextSendMessage(text="馬告是一種生長在台灣的山胡椒，最常見的使用方法就是作為調味料加入食物或飲品之中～")
