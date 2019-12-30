@@ -13,7 +13,7 @@ def replay_msglist(T):
     elif ('馬告' in T and '什麼' in T) or ('馬告' in T and '甚麼' in T):
         msg = TextSendMessage(text="馬告是一種生長在台灣的山胡椒，最常見的使用方法就是作為調味料加入食物或飲品之中～")
         return msg
-    elif '馬告' in T and '產品' in T:
+    elif ('馬告' in T and '產品' in T) or '商品' in T:
         msg = TextSendMessage(text="新鮮或乾燥的馬告都可以作為調味料使用！\n現在也有很多產品像咖啡、餅乾、鳳梨酥也有馬告口味唷～\n在過去，人們會將果實泡水飲用來緩解頭痛呢！\n可以輸入產品示意圖五個字來看實體照片喔！")
         return msg
     elif ('馬告' in T and '知識' in T) or '關於馬告' in T:

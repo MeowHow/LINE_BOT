@@ -42,7 +42,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    if '店家' in msg or '哪裡買' in msg:
+    if '店家' in msg or '哪裡買' in msg or ('哪裡' in msg and '買' in msg):
         message = msglist_Store()
         line_bot_api.reply_message(event.reply_token, message)
     elif '選單' in msg:
