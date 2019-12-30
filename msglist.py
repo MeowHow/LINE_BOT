@@ -144,15 +144,15 @@ def msglist_Recipe():
     X=0
     import random
 
-    if random.randint(0,4) == 1:
+    if random.randint(1,4) == 1:
         A="光明農場（馬告磚窯雞）"
         B="地址： 桃園市復興區復興鄉神木路196號 \n 電話：0913566218"
         C="https://i.imgur.com/rmJNDwA.jpg"
-    elif random.randint(0,4) == 2:
+    elif random.randint(1,4) == 2:
         A="馬告燒鴨"
         B="地址： 新竹縣尖石鄉嘉樂村1鄰1之15號 \n 電話：035842057"
         C="https://i.imgur.com/VwAxi4c.jpg"
-    elif random.randint(0,4) == 3:
+    elif random.randint(1,4) == 3:
         A="慶修院馬告香腸"
         B="地址： 花蓮縣吉安鄉中興路 \n 電話：0918204666"
         C="https://i.imgur.com/nts54Xg.jpg"
